@@ -1,5 +1,6 @@
 ﻿using Application;
 using Microsoft.OpenApi.Models;
+using Persistence;
 
 namespace WebApi
 {
@@ -28,6 +29,7 @@ namespace WebApi
 
             // Add applicaition layer here
             builder.Services.AddApplication();
+            builder.Services.AddPersistence(builder.Configuration);
 
 
             return builder.Build();
